@@ -1,0 +1,1 @@
+uses agents.md for instructions use FusionHit_Resumefor the resume

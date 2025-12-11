@@ -1,0 +1,267 @@
+:root {
+  --blue-deep: #0f4f9c;
+  --blue-bright: #1fa4ff;
+  --blue-soft: #dff1ff;
+  --blue-ink: #123b73;
+  --sand: #f9fbfe;
+  color: #0d1b2a;
+  background: var(--sand);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 15% 20%, #e6f3ff 0, #f7fbff 28%), #f9fbfe;
+  color: #0f1a2b;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-heading), 'Baloo 2', system-ui, sans-serif;
+  color: var(--blue-deep);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--blue-deep);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--blue-bright);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  position: relative;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e4eef7;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(15, 79, 156, 0.09);
+  padding: 28px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 24px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  letter-spacing: 0.4px;
+}
+
+.hero .role {
+  color: var(--blue-ink);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.summary {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #18324e;
+}
+
+.contact {
+  background: rgba(15, 79, 156, 0.08);
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  border: 1px dashed rgba(15, 79, 156, 0.3);
+}
+
+.contact h3 {
+  margin-bottom: 10px;
+  color: var(--blue-ink);
+  font-size: 18px;
+}
+
+.contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f4f9c 0%, #1fa4ff 100%);
+  color: #f9fbfe;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(15, 79, 156, 0.22);
+  font-size: 13px;
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.section h2 {
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+.experience {
+  display: grid;
+  gap: 16px;
+}
+
+.job-card {
+  background: #ffffff;
+  border: 1px solid #e8f0fb;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 8px 18px rgba(18, 59, 115, 0.07);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.job-title {
+  font-size: 17px;
+  color: var(--blue-deep);
+}
+
+.job-meta {
+  color: #315781;
+  font-weight: 600;
+}
+
+.bullets {
+  margin-top: 10px;
+  padding-left: 18px;
+  color: #0f1a2b;
+}
+
+.education {
+  display: grid;
+  gap: 12px;
+}
+
+.edu-card {
+  border-left: 6px solid var(--blue-deep);
+  padding-left: 12px;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0f4f9c 0%, #1fa4ff 100%);
+  color: #f9fbfe;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(15, 79, 156, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: var(--blue-deep);
+  border: 1px solid #d0e6ff;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 79, 156, 0.2);
+}
+
+.glow-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  filter: blur(0.2px);
+}
+
+.floating-badge {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  background: #fff;
+  border: 1px dashed rgba(15, 79, 156, 0.36);
+  border-radius: 14px;
+  padding: 10px 12px;
+  color: var(--blue-ink);
+  box-shadow: 0 8px 18px rgba(12, 45, 92, 0.12);
+  font-size: 13px;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  main {
+    padding: 0;
+    max-width: none;
+  }
+  .hero {
+    box-shadow: none;
+  }
+  .button, .floating-badge {
+    display: none !important;
+  }
+}
